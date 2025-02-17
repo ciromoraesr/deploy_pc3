@@ -10,7 +10,7 @@ const Forgot = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/usuarios/auth/esquecersenha",
+        "https://deploy-pc3-server.vercel.app/usuarios/auth/esquecersenha",
         {
           email,
         }

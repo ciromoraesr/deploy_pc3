@@ -47,7 +47,7 @@ function Profile() {
           const userIdToFetch = id || userId;
           if (!userIdToFetch) return;
           setUsuarioId(userIdToFetch);
-          const response = await axios.get(`http://localhost:5000/usuarios/perfil/usuarios/${userIdToFetch}`);
+          const response = await axios.get(`https://deploy-pc3-server.vercel.app/usuarios/perfil/usuarios/${userIdToFetch}`);
           const userData = response.data;
           console.log("RESPONSE AQUI PORRA ", response);
           setNome(userData.nome);
@@ -103,7 +103,7 @@ const saveProfile = async () => {
     }
 
     const response = await axios.put(
-      `http://localhost:5000/usuarios/perfil/${usuarioId}`,
+      `https://deploy-pc3-server.vercel.app/usuarios/perfil/${usuarioId}`,
       updatedProfile
     );
     if (response.status === 200) {

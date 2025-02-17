@@ -23,7 +23,7 @@ const Register = () => {
         setError(""); 
         setSuccess(""); 
         try {
-            await axios.post("http://localhost:5000/auth/cadastrar", {
+            await axios.post("https://deploy-pc3-server.vercel.app/auth/cadastrar", {
                 nome: name,
                 sobrenome: lastName,
                 genero,

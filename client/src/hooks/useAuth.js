@@ -16,7 +16,7 @@ function useAuth() {
       return;
     }
 
-    fetch("http://localhost:5000/auth/verify-auth", {
+    fetch("https://deploy-pc3-server.vercel.app/auth/verify-auth", {
       headers: {
         Authorization: `Bearer ${token}`,
       },

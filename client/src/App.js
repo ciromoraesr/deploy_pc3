@@ -15,7 +15,7 @@ function App() {
 
     useEffect(() => {
         // Using Axios
-        axios.get('http://localhost:5000/')
+        axios.get('https://deploy-pc3-server.vercel.app/')
             .then(response => {
                 setData(response.data);
             })
@@ -24,7 +24,7 @@ function App() {
             });
 
         // Alternatively, use Fetch API
-        // fetch('http://localhost:5000/api/data')
+        // fetch('https://deploy-pc3-server.vercel.app/api/data')
         //     .then(response => response.json())
         //     .then(data => setData(data))
         //     .catch(error => console.error('Error fetching data:', error));

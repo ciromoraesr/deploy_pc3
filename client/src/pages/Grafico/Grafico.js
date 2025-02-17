@@ -59,7 +59,7 @@ const Grafico = () => {
   useEffect(() => {
     if (!userId) return; 
   
-    fetch(`http://localhost:5000/grafico/${userId}`)
+    fetch(`https://deploy-pc3-server.vercel.app/grafico/${userId}`)
       .then((res) => res.json())
       .then((data) => {
         setGraficos(data.graficoList);  // Set grafico data
@@ -192,7 +192,7 @@ const Grafico = () => {
 
   const handleDelete = async (tabId, graphId) => {
     try {
-      await axios.delete(`http://localhost:5000/grafico/${graphId}/usuario/${userId}`);
+      await axios.delete(`https://deploy-pc3-server.vercel.app/grafico/${graphId}/usuario/${userId}`);
       setGraficos((prev) => prev.filter((_, index) => index !== tabId));
     } catch (error) {
       alert("Erro ao deletar gráfico.");
@@ -208,7 +208,7 @@ const Grafico = () => {
     }
     try {
       const response = await axios.post(
-        `http://localhost:5000/grafico/${userId}`,
+        `https://deploy-pc3-server.vercel.app/grafico/${userId}`,
         formData 
       );
       const newGraph = response.data;

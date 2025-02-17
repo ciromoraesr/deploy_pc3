@@ -27,7 +27,7 @@ const LoginPage = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:5000/auth/login", {
+      const response = await axios.post("https://deploy-pc3-server.vercel.app/auth/login", {
         email: email,
         senha: password,
       });
